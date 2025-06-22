@@ -1,0 +1,89 @@
+#include <M5Core2.h>
+// Fares Hernandez
+// 06/18/2025
+// fhernandezlopez89263@uat.edu
+
+
+
+String myName = "Fares Hernandez"; // this is make a string that is equal to a word.
+long randNum = 0; // make a string that is equal to 0
+
+
+
+void setup() {
+
+M5.begin ();
+ // put your setup code here, to run red
+ M5. Lcd.fillScreen(WHITE);
+  // this is making the text it's size;
+  M5.Lcd.setTextColor(RED);
+  // this set  the cursor
+  M5.Lcd.setTextSize(3);
+  // This is going to print your name;
+  M5.Lcd.print ("Fares Hernandez");
+  }
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  M5.update();
+  // this is  condition  that will  only happen if something is true.
+  if(M5.BtnA.wasReleased() || M5.BtnA.pressedFor(1000,200)){
+ 
+    M5.Lcd.fillScreen(WHITE);
+    // This make the color of the  text red;
+    M5.Lcd.setTextColor(RED);
+    // this is making the text it's size;
+    M5.Lcd.setTextSize(3);
+    // this set the cursor;
+    M5.Lcd.setCursor(50,100);
+    // This is going to print your name;
+    M5.Lcd.print(myName);
+  } else if (M5.BtnB.wasReleased() || M5.BtnB.pressedFor(1000, 200)){
+    randNum = random(1,5);
+ 
+    if(randNum == 1 ){
+      // this is make the screen
+      M5.Lcd.fillScreen(BLUE);
+      // this is make the text red
+      M5.Lcd.setTextColor(RED, WHITE);
+    }
+    else if (randNum == 2 ){
+      // this is make the screen red
+      M5.Lcd.fillScreen(GREEN);
+      // this is make the text black
+      M5.Lcd.setTextColor(BLACK, WHITE);
+    }
+    else if (randNum == 3 ){
+      // this is make the screen red
+      M5.Lcd.fillScreen(RED);
+      // this is make the  screen green
+      M5.Lcd.setTextColor(GREEN, WHITE);
+    }
+    else if (randNum == 4 ){
+ 
+      M5.Lcd.fillScreen(YELLOW);
+           // this is make the  screen green
+      M5.Lcd.setTextColor(RED, WHITE);
+    }
+    // This makes the text size what it is
+    M5.Lcd.setTextSize(3);
+    // this put the text where it is
+    M5.Lcd.setCursor(55,100);
+    // This is printing words
+    M5.Lcd.print("A");
+  }
+else if (M5.BtnC.wasReleased() || M5.BtnC.pressedFor(1000,200)){
+  M5.Lcd.fillScreen(WHITE);
+  // This make the color of the  text red;
+  M5.Lcd.setTextColor(RED);
+  // this is making the text it's size;
+  M5.Lcd.setTextSize(3);
+  // this set the cursor;
+  M5.Lcd.setCursor(50,100);
+  // This is going to print your name;
+  M5.Lcd.print("Fares Hernandez");
+ 
+}
+ 
+ 
+}

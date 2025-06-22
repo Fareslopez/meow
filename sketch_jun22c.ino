@@ -1,0 +1,25 @@
+#include <M5Core2.h>
+// Fares Hernandez
+// 06/18/2025
+// Fhernandezlopez89263@uat.edu
+ 
+void setup() {
+  M5.begin();
+  // put your setup code here, to run once;
+   M5.Lcd.fillScreen(WHITE);
+  // This make the color of the  text red;
+  M5.Lcd.setTextColor(RED);
+  // this is making the text it's size;
+  M5.Lcd.setTextSize(3);
+  // this set the cursor;
+  M5.Lcd.setCursor(50,100);
+  // This is going to print your name;
+  M5.Lcd.print("Fares Hernandez");
+}
+ 
+void loop() {
+  // put your main code here, to run repeatedly:
+ 
+}
+ 
+ 
